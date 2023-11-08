@@ -9,7 +9,26 @@
         body {
             background-color:#222;
         }
+        header {
+            background-color: #fff;
+        }
+        h1 {
+            
+        }
+        .nav_box {
+            display: flex;
+        }
+        .nav_items {
+            list-style: none;
+            display: flex;
+        }
+        .nav_items li {
+            margin: 10px;
+        }
+        .reservation {
+            background-color: maroon;
 
+        }
         /* #basicinfo{
             background-color: #222;
             overflow:hidden;
@@ -62,17 +81,21 @@
 
         <header>
             <div class="nav">
-            <h1>ホテルグループ</h1>
-            <ul>
-                <li><a href="#">For MENBERS</a></li>
-                <li><a href="#">LANGUAGES</a></li>
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="/hotel/booking">RESERVATION</a></li>
-            </ul>
+                <h1 class="logo">ホテルグループ</h1>
+                <div class="nav_box">
+                    <ul   ul class="nav_items">
+                        <li><a href="#"></a></li>
+                        <li class="guest"><a href="/hotel/guest">GUEST REGISTRATION</a></li>
+                        <li class="reservation"><a href="/hotel/booking">RESERVATION</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="top_img_show">
                 <div><img src="" alt=""></div>
             </div>
         </header>
+        <main>
+
+        </main>
 </body>
 </html>

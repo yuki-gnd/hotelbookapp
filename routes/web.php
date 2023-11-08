@@ -16,3 +16,5 @@
 // });
 
 Route::get('hotel','HotelbookappController@index');
+
+Route::get('hotel/guest', 'HotelbookappController@add');
