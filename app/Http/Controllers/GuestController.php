@@ -14,11 +14,18 @@ class GuestController extends Controller
 
     public function create(Request $request)
     {
-        $this->validate($request, Guest::$rules);
-        $guest = new Guest;
-        $form = $request->all();
-        unset($form['_token']);
-        $guest->fill($form)->save();
+        $param = [
+            'name' => $request->name,
+            'address' => $request->address,
+            'phone' => $request->phone
+        ];
+            DB::table('guests')->insert($param);
+
+        // $this->validate($request, Guest::$rules);
+        // $guest = new Guest;
+        // $form = $request->all();
+        // unset($form['_token']);
+        // $guest->fill($form)->save();
         return redirect('/guest');
     }
 

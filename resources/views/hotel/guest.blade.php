@@ -19,7 +19,7 @@
             @csrf
             <tr>
                 <th>お名前</th>
-                <td><input type="text" name="name" required></td>
+                <td><input type="text" name="name"></td>
             </tr>
             <tr>
                 <th>ご住所</th>
@@ -35,15 +35,6 @@
             </tr>
         </table>
         <table>
-            <tr>
-                <th>登録内容</th>
-            </tr>
-            @foreach ($items as $item)
-                <tr>
-                    <td>{{$item->getData()}}</td>
-                </tr>
-            @endforeach
-        </table>
     </form>
 @endsection
 
