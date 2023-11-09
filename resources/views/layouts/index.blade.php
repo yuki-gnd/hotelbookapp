@@ -12,6 +12,13 @@
         header {
             background-color: #fff;
         }
+        main {
+            background-color: #fff;
+        }
+        footer {
+            background-color: #fff;
+            text-align: right;
+        }
         h1 {
             
         }
@@ -29,6 +36,7 @@
             background-color: maroon;
 
         }
+        
         /* #basicinfo{
             background-color: #222;
             overflow:hidden;
@@ -78,7 +86,6 @@
     </style>
 </head>
 <body>
-
         <header>
             <div class="nav">
                 <h1 class="logo">ホテルグループ</h1>
@@ -95,7 +102,10 @@
             </div>
         </header>
         <main>
-
+            @yield('content')
         </main>
+        <footer>
+            Copyright Hotel Group. all rights reserved.
+        </footer>
 </body>
 </html>

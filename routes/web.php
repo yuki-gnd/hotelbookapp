@@ -17,4 +17,5 @@
 
 Route::get('hotel','HotelbookappController@index');
 
-Route::get('hotel/guest', 'HotelbookappController@add');
+Route::get('hotel/guest', 'GuestController@add');
+Route::post('hotel/guest', 'GuestController@create');

@@ -10,9 +10,4 @@ class HotelbookappController extends Controller
     {
         return view('hotel.home');
     }
-
-    public function add()
-    {
-        return view('hotel.guest');
-    }
 }
