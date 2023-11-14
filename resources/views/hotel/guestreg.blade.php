@@ -8,7 +8,8 @@
     </tr>
     <tr>
         <th>お名前</th><th>ご住所</th><th>電話番号</th>
-        <td></td><td></td><td></td>
+        @foreach($param as $item)
+        <td>{{$item['name']}}</td><td>{{$item['address']}}</td><td>{{$item['phone']}}</td>
     </tr>
 </table>
 @endsection

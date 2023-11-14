@@ -27,15 +27,25 @@
             </tr>
             <tr>
             <th>電話番号</th>
-                <td><input type="number" name="phone"></td>
+                <td><input type="text" name="phone"></td>
             </tr>
             <tr>
                 <th></th>
                 <td><input type="submit" value="登録"></td>
             </tr>
         </table>
-        <table>
+
     </form>
+            <table>
+            <tr>
+                <th>※登録内容※</th>
+            </tr>
+            <tr>
+                <th>お名前</th><th>ご住所</th><th>電話番号</th>
+                @foreach($param as $item)
+                <td>{{$item['name']}}</td><td>{{$item['address']}}</td><td>{{$item['phone']}}</td>
+            </tr>
+        </table>
 @endsection
 
 @yield('footer')
