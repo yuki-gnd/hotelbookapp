@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\DB;
 
 class GuestController extends Controller
 {
+    public function index()
+    {
+        $guests = Guest::all();
+        return view('hotel.home', ['guests' => $guests]);
+    }
+
     public function add()
     {
         return view('hotel.guest');
@@ -15,22 +21,22 @@ class GuestController extends Controller
 
     public function create(Request $request)
     {   
-        $user = new Guest();
-        $user->fill($request->all())->save();
+        // $guests = new Guest();
+        // $guests->fill($request->all())->save();
 
-        $param = [
+        $guest = [
             'name' => $request->name,
             'address' => $request->address,
-            'phone' => $request->phone
+            'tel' => $request->tel
         ];
-            DB::insert('insert into guests(name, address, phone) values (:name, :address, :phone)', $param);
+            DB::table('guests')->insert($guest);
+            return redirect('hotel/guest');
 
         // $this->validate($request, Guest::$rules);
         // $guest = new Guest;
         // $form = $request->all();
         // unset($form['_token']);
         // $guest->fill($form)->save();
-        return redirect('guest');
     }
 
 }

@@ -27,24 +27,25 @@
             </tr>
             <tr>
             <th>電話番号</th>
-                <td><input type="text" name="phone"></td>
+                <td><input type="tel" name="tel"></td>
             </tr>
             <tr>
                 <th></th>
                 <td><input type="submit" value="登録"></td>
             </tr>
         </table>
-
     </form>
-            <table>
+
+        <h3>※ご登録内容</h3>
+        <table>
+            <th>お名前</th><th>ご住所</th><th>電話番号</th>
+            @foreach($guests as $guest)
             <tr>
-                <th>※登録内容※</th>
+                <td>{{$guest->name}}</td>
+                <td>{{$guest->address}}</td>
+                <td>{{$guest->tel}}</td>
             </tr>
-            <tr>
-                <th>お名前</th><th>ご住所</th><th>電話番号</th>
-                @foreach($param as $item)
-                <td>{{$item['name']}}</td><td>{{$item['address']}}</td><td>{{$item['phone']}}</td>
-            </tr>
+            @endforeach
         </table>
 @endsection
 

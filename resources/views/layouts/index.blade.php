@@ -93,7 +93,7 @@
                 <h1 class="logo">ホテルグループ</h1>
                 <div class="nav_box">
                     <ul   ul class="nav_items">
-                        <li><a href="#"></a></li>
+                        <li><a class="manage" href="/hotel/home">Management</a></li>
                         <li class="guest"><a href="/hotel/guest">GUEST REGISTRATION</a></li>
                         <li class="reservation"><a href="/hotel/booking">RESERVATION</a></li>
                     </ul>
